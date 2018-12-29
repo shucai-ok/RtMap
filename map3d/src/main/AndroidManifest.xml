@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yzy.map3d">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!--存储权限，用于缓存地图，定位文件-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--读取手机信息权限，用于定位时生成唯一ID需要-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--连接网络权限，用于下载地图，执行路线规划使用-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--操作WiFi权限，在执行WiFi定位的时候使用-->
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--蓝牙权限，用于执行室内定位-->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <!--GPS权限，用于判断建筑需要 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application>
+
+        <!--定位服务-->
+        <service
+            android:name="com.rtm.location.logic.RtmapLbsService"
+            android:enabled="true">
+            <meta-data
+                android:name="background"
+                android:value="true" />
+        </service>
+
+        <meta-data
+            android:name="RTMAP_KEY"
+            android:value="===开发者从RTMAP申请的AppKey===" />
+
+        <activity android:name=".ui.main.MapActivity" />
+
+        <activity android:name=".ui.search.SearchActivity" />
+
+    </application>
+</manifest>

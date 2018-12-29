@@ -1,0 +1,136 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <EditText
+        android:id="@+id/etBuildId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="请输入从RTMAP申请的BuildId"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/etSearchFloor"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="请输入要去的楼层 如:B1,B2,F1,F3" />
+
+    <EditText
+        android:id="@+id/etSearchName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:hint="请输入要去的店铺名 如:一点点" />
+
+    <Switch
+        android:id="@+id/switchDebug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:switchPadding="30dp"
+        android:text="开启 Debug 模式" />
+
+    <Switch
+        android:id="@+id/switchFollow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:switchPadding="30dp"
+        android:text="开启 导航过程中定位点始终跟随" />
+
+    <Switch
+        android:id="@+id/switchCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="10dp"
+        android:checked="false"
+        android:switchPadding="30dp"
+        android:text="开启 特殊区域提醒" />
+
+    <LinearLayout
+        android:id="@+id/llCheckShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/etCheckFloor"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="请输入特殊区域的楼层"
+            android:text="F3" />
+
+        <EditText
+            android:id="@+id/etCheckMsg"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:hint="请输入特殊区域的提示信息"
+            android:text="途经3楼露天平台，信号会暂时丢失，进入馆内自动重新定位。" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp">
+
+            <EditText
+                android:id="@+id/etCheckX1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="左上角X"
+                android:inputType="number"
+                android:text="145" />
+
+            <EditText
+                android:id="@+id/etCheckY1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="左下角Y"
+                android:inputType="number"
+                android:text="88" />
+
+            <EditText
+                android:id="@+id/etCheckX2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:hint="右上角X"
+                android:inputType="number"
+                android:text="245" />
+
+            <EditText
+                android:id="@+id/etCheckY2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="右下角Y"
+                android:inputType="number"
+                android:text="160" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btToMap"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:text="跳转地图" />
+
+</LinearLayout>

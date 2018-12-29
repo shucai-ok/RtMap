@@ -1,0 +1,6 @@
+<resources>
+
+    <item name="tag_position" type="id">tag_position</item>
+    <item name="tag_floor" type="id">tag_floor</item>
+
+</resources>

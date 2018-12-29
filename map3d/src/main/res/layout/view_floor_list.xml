@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/ll_map_floor_up"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="1dp"
+            android:src="@drawable/icon_top" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_map_list"
+        android:layout_width="match_parent"
+        android:layout_height="118dp"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/ll_map_floor_down"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="1dp"
+            android:src="@drawable/icon_down" />
+
+    </LinearLayout>
+</merge>
