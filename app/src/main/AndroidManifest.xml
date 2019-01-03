@@ -18,5 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="RTMAP_KEY"
+            android:value="===开发者从RTMAP申请的AppKey===" />
     </application>
 </manifest>

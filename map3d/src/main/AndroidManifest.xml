@@ -33,10 +33,6 @@
                 android:value="true" />
         </service>
 
-        <meta-data
-            android:name="RTMAP_KEY"
-            android:value="===开发者从RTMAP申请的AppKey===" />
-
         <activity android:name=".ui.main.MapActivity" />
 
         <activity android:name=".ui.search.SearchActivity" />

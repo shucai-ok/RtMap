@@ -1,9 +1,6 @@
 package com.yzy.rtmap;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
@@ -14,7 +11,6 @@ import android.widget.Toast;
 
 import com.yzy.map3d.MapIntentBuilder;
 import com.yzy.map3d.util.SPUtils;
-import com.yzy.map3d.util.StringUtils;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -116,5 +112,11 @@ public class LoginActivity extends AppCompatActivity {
 
         SPUtils.getInstance(LoginActivity.this).put("mapBuildId", buildId);
         startActivity(builder.build());
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        MapIntentBuilder.cleanMap();
     }
 }
